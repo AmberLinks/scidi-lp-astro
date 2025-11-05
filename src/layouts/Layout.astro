@@ -1,0 +1,120 @@
+---
+// カスタムCSSファイルをインポート
+import '../styles/style.css';
+
+// Astroの `Astro.props` から `title` と `description` を受け取る
+export interface Props {
+	title: string;
+	description: string;
+}
+const { title, description } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content={description}>
+    <title>{title}</title>
+    
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+
+</head>
+<body class="font-sans antialiased">
+    
+    <slot />
+
+    <script is:raw src="/js/main.js"></script>
+
+
+    <script>
+        document.addEventListener('astro:page-load', () => {
+            // --- 対象要素を取得 ---
+            const navbar = document.getElementById('navbar');
+            const hero = document.getElementById('hero');
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('section[id]');
+
+            // --- 必須要素の存在チェック ---
+            if (!navbar) {
+                console.warn('スクロール連動機能の必須要素 (navbar) が見つかりません。');
+            }
+
+            // --- 関数定義 ---
+
+            // Navbarの背景変更
+            function updateNavbar(scrollTop) {
+                if (navbar) {
+                    if (scrollTop > 50) {
+                        navbar.classList.add('scrolled');
+                    } else {
+                        navbar.classList.remove('scrolled');
+                    }
+                }
+            }
+
+            // ヒーローセクションのパララックス効果
+            function updateHeroParallax(scrollTop) {
+                // heroBackgroundの取得をquerySelectorの詳細化で修正
+                const heroBg = hero ? hero.querySelector('.absolute.inset-0.bg-cover.bg-center') : null;
+                if (heroBg) {
+                    heroBg.style.transform = `translateY(${scrollTop * 0.5}px)`;
+                }
+            }
+
+            // ナビゲーションのアクティブハイライト
+            function updateActiveNavLink(scrollTop) {
+                if (!navbar) return;
+                const scrollPosition = scrollTop + navbar.offsetHeight + 50;
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.offsetHeight;
+                    const sectionId = section.getAttribute('id');
+                    
+                    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                        navLinks.forEach(link => {
+                            link.classList.remove('border-scidi-green', 'text-scidi-blue');
+                            link.classList.add('border-transparent');
+                            if (link.getAttribute('href') === `#${sectionId}`) {
+                                link.classList.add('border-scidi-green', 'text-scidi-blue');
+                                link.classList.remove('border-transparent');
+                            }
+                        });
+                    }
+                });
+            }
+
+            // --- 統合スクロールイベントリスナー ---
+            let ticking = false; // requestAnimationFrame用
+            function handleScroll() {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+                if (!ticking) {
+                    window.requestAnimationFrame(() => {
+                        // スクロール連動の各関数を呼び出す
+                        updateNavbar(scrollTop);
+                        updateHeroParallax(scrollTop);
+                        updateActiveNavLink(scrollTop);
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            }
+
+            window.addEventListener('scroll', handleScroll, { passive: true }); // パフォーマンス改善
+
+            // --- ページ読み込み時に一度実行 ---
+            setTimeout(() => {
+                handleScroll();
+                console.log('✅ 統合スクロールイベント初期化完了 (Layout.astro / 機能削除版)');
+            }, 100); 
+        });
+    </script>
+    </body>
+</html>

@@ -1,16 +1,1066 @@
 ---
-
+import Layout from '../layouts/Layout.astro';
 ---
+<Layout 
+  title="サビイロネコ保護プロジェクト | SCIDI" 
+  description="サビイロネコ保護プロジェクト - 密猟ゼロの世界へ。正規の「正門」を創る。SCIDI（希少種保全・疾病対策支援機構）"
+>
+  
+    <nav class="fixed top-0 left-0 right-0 bg-white shadow-md z-50 transition-all duration-300 mt-1" id="navbar">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-3">
+                    <img src="https://page.gensparksite.com/v1/base64_upload/4e26ab94932310ed617b23c06f28d7db" alt="SCIDI Logo" class="h-12 w-12">
+                    <div>
+                        <div class="text-lg font-bold text-scidi-blue">SCIDI</div>
+                        <div class="text-xs text-gray-600">希少種保全・疾病対策支援機構</div>
+                    </div>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="#about" class="nav-link text-gray-700 hover:text-scidi-blue transition-colors py-2 border-b-2 border-transparent hover:border-scidi-green">プロジェクトについて</a>
+                    <a href="#crisis" class="nav-link text-gray-700 hover:text-scidi-blue transition-colors py-2 border-b-2 border-transparent hover:border-scidi-green">危機の現状</a>
+                    <a href="#solution" class="nav-link text-gray-700 hover:text-scidi-blue transition-colors py-2 border-b-2 border-transparent hover:border-scidi-green">私たちの取り組み</a>
+                    <a href="#roadmap" class="nav-link text-gray-700 hover:text-scidi-blue transition-colors py-2 border-b-2 border-transparent hover:border-scidi-green">ロードマップ</a>
+                    <a href="#team" class="nav-link text-gray-700 hover:text-scidi-blue transition-colors py-2 border-b-2 border-transparent hover:border-scidi-green">チーム</a>
+                    <a href="#partners" class="nav-link text-gray-700 hover:text-scidi-blue transition-colors py-2 border-b-2 border-transparent hover:border-scidi-green">パートナー</a>
+                    <a href="#support" class="bg-scidi-green text-white px-6 py-2 rounded-full hover:bg-scidi-dark-green transition-all font-medium shadow-md hover:shadow-lg">支援方法</a>
+                </div>
+                
+                <button class="md:hidden text-scidi-blue" id="mobile-menu-button">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            
+            <div class="hidden md:hidden pb-4" id="mobile-menu">
+                <a href="#about" class="block py-2 text-gray-700 hover:text-scidi-blue transition-colors border-l-4 border-transparent hover:border-scidi-green pl-4">プロジェクトについて</a>
+                <a href="#crisis" class="block py-2 text-gray-700 hover:text-scidi-blue transition-colors border-l-4 border-transparent hover:border-scidi-green pl-4">危機の現状</a>
+                <a href="#solution" class="block py-2 text-gray-700 hover:text-scidi-blue transition-colors border-l-4 border-transparent hover:border-scidi-green pl-4">私たちの取り組み</a>
+                <a href="#roadmap" class="block py-2 text-gray-700 hover:text-scidi-blue transition-colors border-l-4 border-transparent hover:border-scidi-green pl-4">ロードマップ</a>
+                <a href="#team" class="block py-2 text-gray-700 hover:text-scidi-blue transition-colors border-l-4 border-transparent hover:border-scidi-green pl-4">チーム</a>
+                <a href="#partners" class="block py-2 text-gray-700 hover:text-scidi-blue transition-colors border-l-4 border-transparent hover:border-scidi-green pl-4">パートナー</a>
+                <a href="#support" class="block py-2 mt-2 bg-scidi-green text-white px-6 py-2 rounded-full hover:bg-scidi-dark-green transition-all text-center font-medium">支援方法</a>
+            </div>
+        </div>
+    </nav>
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+    <section class="relative h-screen flex items-center justify-center overflow-hidden" id="hero">
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://page.gensparksite.com/v1/base64_upload/1324d3d31cd6e631a40b337144f3493a'); filter: brightness(0.6);"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-black/40 to-black/60"></div>
+        
+        <div class="relative z-10 text-center text-white px-4 max-w-5xl mx-auto mt-16 sm:mt-0">
+            <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight animate-fade-in-up">
+                密猟ゼロの世界へ。<br>
+                正規の「正門」を創る
+            </h1>
+            <p class="text-base sm:text-lg md:text-xl mb-8 font-medium animate-fade-in-up animation-delay-200">
+                世界最小級の野生ネコ、サビイロネコを守る
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up animation-delay-400">
+                <a href="#about" class="bg-scidi-green text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-bold hover:bg-scidi-dark-green transition-all transform hover:scale-105 shadow-lg">
+                    詳しく知る
+                </a>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i class="fas fa-chevron-down text-white text-3xl"></i>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white" id="about">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-scidi-blue mb-4">サビイロネコとは</h2>
+                <div class="w-24 h-1 bg-scidi-green mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+                <div class="space-y-6">
+                    <h3 class="text-3xl font-bold text-gray-800">世界最小級の野生ネコ科動物</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-map-marker-alt text-scidi-green text-2xl mt-1"></i>
+                            <div>
+                                <p class="font-bold text-gray-800">生息地</p>
+                                <p class="text-gray-600">スリランカ・インド固有種</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-weight text-scidi-green text-2xl mt-1"></i>
+                            <div>
+                                <p class="font-bold text-gray-800">体重</p>
+                                <p class="text-gray-600">0.9-1.6kg（成体）</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-exclamation-triangle text-red-500 text-2xl mt-1"></i>
+                            <div>
+                                <p class="font-bold text-gray-800">絶滅危機レベル</p>
+                                <p class="text-gray-600">IUCN準絶滅危惧種（VU: Vulnerable）</p>
+                                <p class="text-gray-600">ワシントン条約（CITES）附属書Ⅱ類</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-scidi-light-blue p-6 rounded-lg">
+                        <p class="text-lg text-gray-700">
+                            <span class="font-bold text-scidi-blue">家猫の約1/3〜1/4の大きさ</span>という世界最小級の野生ネコ科動物です。
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <div class="bg-gray-100 rounded-lg p-8">
+                        <h4 class="text-2xl font-bold text-center text-gray-800 mb-8">大きさ比較</h4>
+                        <div class="space-y-8">
+                            <div class="flex items-center justify-between">
+                                <div class="text-center flex-1">
+                                    <i class="fas fa-cat text-gray-600 text-6xl mb-3"></i>
+                                    <p class="font-bold text-gray-800">一般的な家猫</p>
+                                    <p class="text-3xl font-bold text-scidi-blue">3.5-4.5kg</p>
+                                </div>
+                                <div class="text-4xl text-gray-400 px-4">VS</div>
+                                <div class="text-center flex-1">
+                                    <i class="fas fa-cat text-scidi-green text-4xl mb-3"></i>
+                                    <p class="font-bold text-gray-800">サビイロネコ</p>
+                                    <p class="text-3xl font-bold text-scidi-green">0.9-1.6kg</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-20">
+                <h3 class="text-3xl font-bold text-center text-gray-800 mb-12">主な脅威</h3>
+                <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                    <div class="bg-white border-2 border-gray-200 rounded-lg p-6 text-center hover:border-scidi-green transition-all hover:shadow-lg">
+                        <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-user-secret text-red-500 text-3xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-2">密猟・密輸</h4>
+                        <p class="text-gray-600">毛皮やペット目的の違法捕獲</p>
+                    </div>
+                    <div class="bg-white border-2 border-gray-200 rounded-lg p-6 text-center hover:border-scidi-green transition-all hover:shadow-lg">
+                        <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-tree text-orange-500 text-3xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-2">生息地破壊</h4>
+                        <p class="text-gray-600">森林伐採による住処の消失</p>
+                    </div>
+                    <div class="bg-white border-2 border-gray-200 rounded-lg p-6 text-center hover:border-scidi-green transition-all hover:shadow-lg">
+                        <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-dollar-sign text-purple-500 text-3xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-2">違法取引</h4>
+                        <p class="text-gray-600">高額で取引される希少動物</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-gray-50" id="crisis">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-scidi-blue mb-4">なぜ今、行動が必要か</h2>
+                <div class="w-24 h-1 bg-scidi-green mx-auto"></div>
+            </div>
+            
+            <div class="max-w-4xl mx-auto mb-20">
+                <div class="bg-gradient-to-br from-scidi-blue to-scidi-dark-green rounded-2xl p-12 text-white text-center shadow-2xl">
+                    <h3 class="text-2xl md:text-3xl font-bold mb-6">世界の動物違法取引の経済規模</h3>
+                    <div class="mb-6">
+                        <p class="text-lg mb-4">年間の違法取引額（UNEP/INTERPOL推計）</p>
+                        <div class="flex items-center justify-center gap-4 mb-4">
+                            <p class="text-3xl md:text-4xl font-bold text-white/80">最大</p>
+                            <div class="relative">
+                                <p class="text-7xl md:text-9xl font-black">3.4</p>
+                                <div class="absolute -top-2 -right-2 w-4 h-4 bg-yellow-400 rounded-full animate-ping"></div>
+                                <div class="absolute -top-2 -right-2 w-4 h-4 bg-yellow-400 rounded-full"></div>
+                            </div>
+                            <p class="text-5xl md:text-6xl font-black">兆円</p>
+                        </div>
+                        <p class="text-xl md:text-2xl text-white/90 mb-2">（1兆円〜3.4兆円）</p>
+                    </div>
+                    <div class="inline-block bg-white/20 backdrop-blur-sm px-8 py-4 rounded-full">
+                        <p class="text-2xl font-bold">世界4位の国際組織犯罪</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="max-w-4xl mx-auto mb-16">
+                <div class="bg-white rounded-lg p-8 shadow-lg">
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        この巨大な犯罪市場は、「可愛い、珍しい」といった私たちの純粋な興味や、「希少動物を所有したい」という歪んだ欲求を悪用し、
+                        莫大な利益を上げ、その利益を<span class="font-bold text-red-600">犯罪や紛争に流出</span>させます。また、管理されていない動物の移動は、
+                        将来パンデミックを起こしかねない<span class="font-bold text-red-600">未知の感染症（ズーノーシス）を拡散</span>させる、公衆衛生上の深刻なリスクを孕みます。
+                    </p>
+                </div>
+            </div>
+            
+            <div class="max-w-6xl mx-auto">
+                <h3 class="text-3xl font-bold text-center text-gray-800 mb-12">経済損失と影響の連鎖</h3>
+                
+                <div class="mb-16">
+                    <h4 class="text-xl font-bold text-center text-scidi-blue mb-8">① 犯罪・紛争への影響</h4>
+                    <div class="hidden md:flex items-center justify-center gap-4">
+                        <div class="text-center">
+                            <div class="w-28 h-28 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-3 shadow-lg">
+                                <i class="fas fa-user-secret text-white text-3xl"></i>
+                            </div>
+                            <p class="font-bold text-gray-800">密猟</p>
+                        </div>
+                        <i class="fas fa-arrow-right text-gray-400 text-3xl"></i>
+                        <div class="text-center">
+                            <div class="w-28 h-28 bg-gray-700 rounded-full flex items-center justify-center mx-auto mb-3 shadow-lg">
+                                <i class="fas fa-mask text-white text-3xl"></i>
+                            </div>
+                            <p class="font-bold text-gray-800">犯罪組織の<br>資金源</p>
+                        </div>
+                        <i class="fas fa-arrow-right text-gray-400 text-3xl"></i>
+                        <div class="text-center">
+                            <div class="w-28 h-28 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-3 shadow-lg">
+                                <i class="fas fa-bomb text-white text-3xl"></i>
+                            </div>
+                            <p class="font-bold text-gray-800">テロ・<br>地域紛争</p>
+                        </div>
+                        <i class="fas fa-arrow-right text-gray-400 text-3xl"></i>
+                        <div class="text-center">
+                            <div class="w-28 h-28 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-3 shadow-lg">
+                                <i class="fas fa-leaf text-white text-3xl"></i>
+                            </div>
+                            <p class="font-bold text-gray-800">生態系破壊</p>
+                        </div>
+                    </div>
+                    
+                    <div class="md:hidden space-y-4">
+                        <div class="flex flex-col items-center text-center">
+                            <div class="w-20 h-20 bg-red-500 rounded-full flex items-center justify-center shadow-lg mb-2">
+                                <i class="fas fa-user-secret text-white text-2xl"></i>
+                            </div>
+                            <p class="font-bold text-gray-800 text-sm">密猟</p>
+                        </div>
+                        <div class="flex justify-center">
+                            <i class="fas fa-arrow-down text-gray-400 text-xl"></i>
+                        </div>
+                        <div class="flex flex-col items-center text-center">
+                            <div class="w-20 h-20 bg-gray-700 rounded-full flex items-center justify-center shadow-lg mb-2">
+                                <i class="fas fa-mask text-white text-2xl"></i>
+                            </div>
+                            <p class="font-bold text-gray-800 text-sm">犯罪組織の資金源</p>
+                        </div>
+                        <div class="flex justify-center">
+                            <i class="fas fa-arrow-down text-gray-400 text-xl"></i>
+                        </div>
+                        <div class="flex flex-col items-center text-center">
+                            <div class="w-20 h-20 bg-orange-600 rounded-full flex items-center justify-center shadow-lg mb-2">
+                                <i class="fas fa-bomb text-white text-2xl"></i>
+                            </div>
+                            <p class="font-bold text-gray-800 text-sm">テロ・地域紛争</p>
+                        </div>
+                        <div class="flex justify-center">
+                            <i class="fas fa-arrow-down text-gray-400 text-xl"></i>
+                        </div>
+                        <div class="flex flex-col items-center text-center">
+                            <div class="w-20 h-20 bg-purple-600 rounded-full flex items-center justify-center shadow-lg mb-2">
+                                <i class="fas fa-leaf text-white text-2xl"></i>
+                            </div>
+                            <p class="font-bold text-gray-800 text-sm">生態系破壊</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-bold text-center text-scidi-blue mb-8">② 感染症リスクへの影響</h4>
+                    <div class="hidden md:flex items-center justify-center gap-4">
+                        <div class="text-center">
+                            <div class="w-28 h-28 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-3 shadow-lg">
+                                <i class="fas fa-user-secret text-white text-3xl"></i>
+                            </div>
+                            <p class="font-bold text-gray-800">密猟</p>
+                        </div>
+                        <i class="fas fa-arrow-right text-gray-400 text-3xl"></i>
+                        <div class="text-center">
+                            <div class="w-28 h-28 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-3 shadow-lg">
+                                <i class="fas fa-plane text-white text-3xl"></i>
+                            </div>
+                            <p class="font-bold text-gray-800">管理不足の<br>国際輸送</p>
+                        </div>
+                        <i class="fas fa-arrow-right text-gray-400 text-3xl"></i>
+                        <div class="text-center">
+                            <div class="w-28 h-28 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-3 shadow-lg">
+                                <i class="fas fa-virus text-white text-3xl"></i>
+                            </div>
+                            <p class="font-bold text-gray-800">パンデミック<br>リスク</p>
+                        </div>
+                    </div>
+                    
+                    <div class="md:hidden space-y-4">
+                        <div class="flex flex-col items-center text-center">
+                            <div class="w-20 h-20 bg-red-500 rounded-full flex items-center justify-center shadow-lg mb-2">
+                                <i class="fas fa-user-secret text-white text-2xl"></i>
+                            </div>
+                            <p class="font-bold text-gray-800 text-sm">密猟</p>
+                        </div>
+                        <div class="flex justify-center">
+                            <i class="fas fa-arrow-down text-gray-400 text-xl"></i>
+                        </div>
+                        <div class="flex flex-col items-center text-center">
+                            <div class="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center shadow-lg mb-2">
+                                <i class="fas fa-plane text-white text-2xl"></i>
+                            </div>
+                            <p class="font-bold text-gray-800 text-sm">管理不足の国際輸送</p>
+                        </div>
+                        <div class="flex justify-center">
+                            <i class="fas fa-arrow-down text-gray-400 text-xl"></i>
+                        </div>
+                        <div class="flex flex-col items-center text-center">
+                            <div class="w-20 h-20 bg-green-600 rounded-full flex items-center justify-center shadow-lg mb-2">
+                                <i class="fas fa-virus text-white text-2xl"></i>
+                            </div>
+                            <p class="font-bold text-gray-800 text-sm">パンデミックリスク</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white" id="solution">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-scidi-blue mb-4">私たちのアプローチ：「正門」を創る</h2>
+                <div class="w-24 h-1 bg-scidi-green mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    合法的かつ適正な利益となる正規ルートを確立し、密猟の根本原因に対処
+                </p>
+            </div>
+            
+            <div class="max-w-5xl mx-auto mb-16">
+                <h3 class="text-2xl font-bold text-center text-gray-800 mb-8">対策アプローチの比較</h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-red-50 border-2 border-red-200 rounded-xl p-8 text-center">
+                        <div class="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-times text-white text-3xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-4">既存の対策：「裏口」を塞ぐ</h4>
+                        <p class="text-gray-600 leading-relaxed">
+                            多くの団体が違法取引というルートを取り締まりますが、密猟の経済的動機に対処できていません
+                        </p>
+                    </div>
+                    <div class="bg-green-50 border-2 border-scidi-green rounded-xl p-8 text-center">
+                        <div class="w-16 h-16 bg-scidi-green rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-check text-white text-3xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-800 mb-4">SCIDIのアプローチ：「正門」を創る</h4>
+                        <p class="text-gray-600 leading-relaxed">
+                            合法的かつ適正な利益となる正規ルートを確立し、密猟の根本原因に対処
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="max-w-6xl mx-auto mb-16">
+                <h3 class="text-2xl font-bold text-center text-gray-800 mb-12">「正門」モデルの3本柱</h3>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-gradient-to-br from-scidi-blue to-blue-700 rounded-xl p-8 text-white shadow-xl">
+                        <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <span class="text-3xl font-bold">1</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-6 text-center">正規導入</h3>
+                        <ul class="space-y-3 text-white/90">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-scidi-green mr-3 mt-1 flex-shrink-0"></i>
+                                <span>CITES等の法令を完全遵守</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-scidi-green mr-3 mt-1 flex-shrink-0"></i>
+                                <span>獣医師による厳格な検疫体制</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-scidi-green mr-3 mt-1 flex-shrink-0"></i>
+                                <span>アニマルウェルフェアの徹底</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-gradient-to-br from-scidi-green to-green-700 rounded-xl p-8 text-white shadow-xl">
+                        <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <span class="text-3xl font-bold">2</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-6 text-center">飼育繁殖</h3>
+                        <ul class="space-y-3 text-white/90">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-yellow-300 mr-3 mt-1 flex-shrink-0"></i>
+                                <span>国内トップ動物園との連携</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-yellow-300 mr-3 mt-1 flex-shrink-0"></i>
+                                <span>遺伝的多様性の維持</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-yellow-300 mr-3 mt-1 flex-shrink-0"></i>
+                                <span>科学的な繁殖計画</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-gradient-to-br from-purple-600 to-purple-800 rounded-xl p-8 text-white shadow-xl">
+                        <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <span class="text-3xl font-bold">3</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-6 text-center">研究・啓蒙</h3>
+                        <ul class="space-y-3 text-white/90">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-pink-300 mr-3 mt-1 flex-shrink-0"></i>
+                                <span>One Healthへの貢献</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-pink-300 mr-3 mt-1 flex-shrink-0"></i>
+                                <span>生物多様性教育の推進</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-pink-300 mr-3 mt-1 flex-shrink-0"></i>
+                                <span>モデルの世界展開</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="max-w-4xl mx-auto mb-16">
+                <div class="bg-gradient-to-r from-scidi-blue to-scidi-green rounded-2xl p-8 text-white text-center shadow-2xl">
+                    <div class="flex items-center justify-center mb-4">
+                        <i class="fas fa-bullseye text-4xl mr-4"></i>
+                        <h3 class="text-2xl md:text-3xl font-bold">効果：密猟の経済的インセンティブを消滅させる</h3>
+                    </div>
+                    <p class="text-lg text-white/90 leading-relaxed">
+                        「裏口」で売るよりも、「正門」を通す方が遥かにメリットが大きい経済構造を作り出し、<br class="hidden md:block">
+                        密猟の根本原因である経済的インセンティブを消失・転換させます
+                    </p>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <section class="py-20 bg-gray-50" id="roadmap">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-scidi-blue mb-4">プロジェクトロードマップ</h2>
+                <div class="w-24 h-1 bg-scidi-green mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    段階的なアプローチで「正門」モデルを確立し、世界へ展開します
+                </p>
+            </div>
+            
+            <div class="max-w-6xl mx-auto mb-20">
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+                    <div class="bg-gradient-to-r from-scidi-blue to-blue-700 text-white px-8 py-6">
+                        <h3 class="text-2xl md:text-3xl font-bold flex items-center">
+                            <i class="fas fa-calendar-check mr-4"></i>
+                            短期目標（1年以内）
+                        </h3>
+                    </div>
+                    
+                    <div class="p-8">
+                        <div class="grid md:grid-cols-3 gap-8">
+                            <div class="relative">
+                                <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                                    <span class="bg-red-500 text-white text-xs px-3 py-1 rounded-full font-bold">現在地</span>
+                                </div>
+                                <div class="flex flex-col items-center mb-6">
+                                    <div class="w-20 h-20 bg-scidi-blue rounded-full flex items-center justify-center mb-4 shadow-lg">
+                                        <span class="text-white text-2xl font-bold">1</span>
+                                    </div>
+                                    <h4 class="text-xl font-bold text-gray-800">基盤構築</h4>
+                                </div>
+                                <ul class="space-y-3">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-gray-300 mr-3 mt-1 flex-shrink-0"></i>
+                                        <span class="text-gray-700">SCIDI法人登記完了</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-gray-300 mr-3 mt-1 flex-shrink-0"></i>
+                                        <span class="text-gray-700">提供動物園・研究機関の選定</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-scidi-green mr-3 mt-1 flex-shrink-0"></i>
+                                        <span class="text-gray-700">専門家チーム構成</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-scidi-green mr-3 mt-1 flex-shrink-0"></i>
+                                        <span class="text-gray-700">公式サイト開設・情報発信開始</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="relative">
+                                <div class="flex flex-col items-center mb-6">
+                                    <div class="w-20 h-20 bg-gray-400 rounded-full flex items-center justify-center mb-4 shadow-lg">
+                                        <span class="text-white text-2xl font-bold">2</span>
+                                    </div>
+                                    <h4 class="text-xl font-bold text-gray-800">公式ルート確立</h4>
+                                </div>
+                                <ul class="space-y-3">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-scidi-green mr-3 mt-1 flex-shrink-0"></i>
+                                        <span class="text-gray-700">スリランカ政府との事前交渉</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-gray-300 mr-3 mt-1 flex-shrink-0"></i>
+                                        <span class="text-gray-700">スリランカ政府へのLOI提出（年度内）</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-gray-300 mr-3 mt-1 flex-shrink-0"></i>
+                                        <span class="text-gray-700">スリランカでの輸出個体管理開始</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-gray-300 mr-3 mt-1 flex-shrink-0"></i>
+                                        <span class="text-gray-700">提供動物園・研究機関との合意締結</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="relative">
+                                <div class="flex flex-col items-center mb-6">
+                                    <div class="w-20 h-20 bg-gray-400 rounded-full flex items-center justify-center mb-4 shadow-lg">
+                                        <span class="text-white text-2xl font-bold">3</span>
+                                    </div>
+                                    <h4 class="text-xl font-bold text-gray-800">導入準備</h4>
+                                </div>
+                                <ul class="space-y-3">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-gray-300 mr-3 mt-1 flex-shrink-0"></i>
+                                        <span class="text-gray-700">スリランカ政府とのMOU締結</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-gray-300 mr-3 mt-1 flex-shrink-0"></i>
+                                        <span class="text-gray-700">受け入れ施設の整備</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-gray-300 mr-3 mt-1 flex-shrink-0"></i>
+                                        <span class="text-gray-700">日本国内への正規導入実施</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-circle text-gray-300 mr-3 mt-1 flex-shrink-0"></i>
+                                        <span class="text-gray-700">域外保全拠点の確立</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="max-w-6xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-8 mb-12">
+                    <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+                        <div class="bg-gradient-to-r from-scidi-green to-green-700 text-white px-6 py-4">
+                            <div class="text-center">
+                                <h3 class="text-2xl font-bold">中期目標</h3>
+                                <p class="text-lg text-white/90 mt-1">（3年以内）</p>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <ul class="space-y-4">
+                                <li class="flex items-start">
+                                    <i class="fas fa-arrow-right text-scidi-green mr-3 mt-1 flex-shrink-0"></i>
+                                    <span class="text-gray-700">サビイロネコの繁殖成功の安定化</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-arrow-right text-scidi-green mr-3 mt-1 flex-shrink-0"></i>
+                                    <span class="text-gray-700">横展開準備（マニュアル/パッケージ化）</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-arrow-right text-scidi-green mr-3 mt-1 flex-shrink-0"></i>
+                                    <span class="text-gray-700">繁殖個体群の長期的な健全性の三者共同管理</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+                        <div class="bg-gradient-to-r from-purple-600 to-purple-800 text-white px-6 py-4">
+                            <div class="text-center">
+                                <h3 class="text-2xl font-bold">長期目標</h3>
+                                <p class="text-lg text-white/90 mt-1">（10年以内）</p>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <ul class="space-y-4">
+                                <li class="flex items-start">
+                                    <i class="fas fa-arrow-right text-purple-600 mr-3 mt-1 flex-shrink-0"></i>
+                                    <span class="text-gray-700">正門モデルの世界展開（アジア・アフリカ・南米）</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-arrow-right text-purple-600 mr-3 mt-1 flex-shrink-0"></i>
+                                    <span class="text-gray-700">CITES・IUCNとの連携強化</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-arrow-right text-purple-600 mr-3 mt-1 flex-shrink-0"></i>
+                                    <span class="text-gray-700">グローバルヘルスセキュリティへの貢献</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-arrow-right text-purple-600 mr-3 mt-1 flex-shrink-0"></i>
+                                    <span class="text-gray-700">One Health（人・動物・環境の健康）の実現</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gradient-to-br from-scidi-blue via-scidi-green to-purple-600 rounded-2xl p-8 md:p-10 text-white shadow-2xl">
+                    <div class="text-center mb-10">
+                        <i class="fas fa-globe text-5xl mb-4"></i>
+                        <h3 class="text-2xl md:text-3xl font-bold mb-2">「正門」モデルの世界展開</h3>
+                        <p class="text-white/90 text-lg">グローバルな保護ネットワークの構築</p>
+                    </div>
+                    
+                    <div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-6 mb-8">
+                        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mr-3">
+                                    <i class="fas fa-box-open text-2xl"></i>
+                                </div>
+                                <h4 class="font-bold text-xl">パッケージ化</h4>
+                            </div>
+                            <p class="text-white/90 leading-relaxed text-sm">
+                                サビイロネコで得られた知見（政府交渉、法的手続き、検疫、飼育技術）をマニュアル化。他国へ提供可能な「SCIDI『正門』モデルパッケージ」を作成。
+                            </p>
+                        </div>
+                        
+                        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mr-3">
+                                    <i class="fas fa-expand-arrows-alt text-2xl"></i>
+                                </div>
+                                <h4 class="font-bold text-xl">対象種の拡大</h4>
+                            </div>
+                            <p class="text-white/90 leading-relaxed text-sm">
+                                現地のニーズと実現可能性に基づき、爬虫類、鳥類、昆虫類など、多様な分類群へと対象を拡大。
+                            </p>
+                        </div>
+                        
+                        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mr-3">
+                                    <i class="fas fa-handshake text-2xl"></i>
+                                </div>
+                                <h4 class="font-bold text-xl">パートナーシップ</h4>
+                            </div>
+                            <p class="text-white/90 leading-relaxed text-sm">
+                                アジア、アフリカ、南米の各国政府や研究機関、現地NGOと連携し、新たな「正門」創設プロジェクトを共同実施。
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white/15 backdrop-blur-sm rounded-xl p-6 max-w-4xl mx-auto">
+                        <div class="flex items-center justify-center mb-4">
+                            <i class="fas fa-lightbulb text-yellow-300 text-3xl mr-3"></i>
+                            <h4 class="font-bold text-2xl">SCIDIの構想</h4>
+                        </div>
+                        <p class="text-center text-white/90 text-lg leading-relaxed">
+                            サビイロネコでの成功モデルを他の希少種・地域へ展開し、<br class="hidden md:block">
+                            最終的に<span class="font-bold text-yellow-300 text-xl">「密猟ゼロの世界」</span>を実現
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white" id="team">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-scidi-blue mb-4">プロジェクト体制</h2>
+                <div class="w-24 h-1 bg-scidi-green mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    専門性と信頼性を兼ね備えたチームで、確実な実行を目指します
+                </p>
+            </div>
+            
+            <div class="max-w-6xl mx-auto mb-16">
+                <h3 class="text-2xl font-bold text-center text-gray-800 mb-10 flex items-center justify-center">
+                    <i class="fas fa-users text-scidi-green mr-3"></i>
+                    実行チーム
+                </h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-gradient-to-br from-scidi-blue to-blue-700 rounded-xl p-6 text-white text-center shadow-lg">
+                        <div class="mb-4">
+                            <span class="bg-white/20 px-4 py-1 rounded-full text-sm font-bold">代表理事</span>
+                        </div>
+                        <h4 class="text-2xl font-bold mb-2">坂本俊輔</h4>
+                        <p class="text-white/90 text-sm">獣医師・プロジェクト推進責任者</p>
+                    </div>
+                    
+                    <div class="bg-gradient-to-br from-scidi-green to-green-700 rounded-xl p-6 text-white text-center shadow-lg">
+                        <div class="mb-4">
+                            <span class="bg-white/20 px-4 py-1 rounded-full text-sm font-bold">理事</span>
+                        </div>
+                        <h4 class="text-2xl font-bold mb-2">浦和勇人</h4>
+                        <p class="text-white/90 text-sm">小動物臨床獣医師・ITエンジニア</p>
+                    </div>
+                    
+                    <div class="bg-gradient-to-br from-scidi-green to-green-700 rounded-xl p-6 text-white text-center shadow-lg">
+                        <div class="mb-4">
+                            <span class="bg-white/20 px-4 py-1 rounded-full text-sm font-bold">理事</span>
+                        </div>
+                        <h4 class="text-2xl font-bold mb-2">亀谷光織</h4>
+                        <p class="text-white/90 text-sm">新江ノ島水族館所属獣医師</p>
+                    </div>
+                    
+                    <div class="bg-gradient-to-br from-purple-600 to-purple-800 rounded-xl p-6 text-white text-center shadow-lg">
+                        <div class="mb-4">
+                            <span class="bg-white/20 px-4 py-1 rounded-full text-sm font-bold">監事</span>
+                        </div>
+                        <h4 class="text-2xl font-bold mb-2">大橋武久</h4>
+                        <p class="text-white/90 text-sm">国連支援国際協力プロジェクト</p>
+                    </div>
+                </div>
+                
+                <div class="mt-8 text-center">
+                    <p class="text-gray-600 leading-relaxed">
+                        その他、国際交流事業協同組合理事長、JAZA（日本動物園水族館協会）の専門家、<br>
+                        法律・会計の専門家チームとの強力な連携のもとで事業を推進します
+                    </p>
+                </div>
+            </div>
+            
+            <div class="max-w-6xl mx-auto mb-16">
+                <h3 class="text-2xl font-bold text-center text-gray-800 mb-10 flex items-center justify-center">
+                    <i class="fas fa-star text-scidi-green mr-3"></i>
+                    SCIDIの強みと独自性
+                </h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white border-2 border-scidi-green rounded-xl p-6 text-center hover:shadow-xl transition-all">
+                        <div class="w-20 h-20 bg-scidi-green/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-handshake text-scidi-green text-3xl"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-800 mb-3">国際的な正当性</h4>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            スリランカ政府との公式な協力関係と、強固なパイプ
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white border-2 border-scidi-green rounded-xl p-6 text-center hover:shadow-xl transition-all">
+                        <div class="w-20 h-20 bg-scidi-green/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-flask text-scidi-green text-3xl"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-800 mb-3">科学的な信頼性</h4>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            獣医師免許を持つ専門家が主導する、安全な導入・飼育計画
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white border-2 border-scidi-green rounded-xl p-6 text-center hover:shadow-xl transition-all">
+                        <div class="w-20 h-20 bg-scidi-green/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-building text-scidi-green text-3xl"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-800 mb-3">実行可能な受け皿</h4>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            国内トップクラスの飼育動物園による、確かな飼育管理体制
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white border-2 border-scidi-green rounded-xl p-6 text-center hover:shadow-xl transition-all">
+                        <div class="w-20 h-20 bg-scidi-green/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-coins text-scidi-green text-3xl"></i>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-800 mb-3">持続可能な資金計画</h4>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            国連支援国際協力を通じた、時代を永続させる遺産モデル
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="max-w-5xl mx-auto">
+                <h3 class="text-2xl font-bold text-center text-gray-800 mb-10 flex items-center justify-center">
+                    <i class="fas fa-shield-alt text-scidi-green mr-3"></i>
+                    組織運営と透明性
+                </h3>
+                <div class="bg-gradient-to-r from-scidi-blue to-scidi-green rounded-2xl p-8 text-white">
+                    <div class="text-center mb-8">
+                        <h4 class="text-2xl font-bold mb-2">密猟ゼロ世界への「正門」を開通させる。</h4>
+                    </div>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
+                            <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-balance-scale text-3xl"></i>
+                            </div>
+                            <h5 class="font-bold text-lg mb-2">組織管理</h5>
+                            <p class="text-white/90 text-sm">理事会・監事による適正な組織運営</p>
+                        </div>
+                        
+                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
+                            <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-bullhorn text-3xl"></i>
+                            </div>
+                            <h5 class="font-bold text-lg mb-2">情報公開</h5>
+                            <p class="text-white/90 text-sm">活動内容、事業報告、財務状況の積極的な公開</p>
+                        </div>
+                        
+                        <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
+                            <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-gavel text-3xl"></i>
+                            </div>
+                            <h5 class="font-bold text-lg mb-2">法令遵守</h5>
+                            <p class="text-white/90 text-sm">国内外の関連法規を遵守した健全的な活動</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-gray-50" id="partners">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-scidi-blue mb-4">支援組織・連携パートナー</h2>
+                <div class="w-24 h-1 bg-scidi-green mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    国内外の信頼できる組織との連携により、持続可能な活動を推進します
+                </p>
+            </div>
+            
+            <div class="max-w-5xl mx-auto mb-16">
+                <div class="bg-gradient-to-r from-scidi-blue to-scidi-green rounded-2xl p-8 md:p-10 text-white shadow-2xl">
+                    <div class="text-center mb-8">
+                        <i class="fas fa-hands-helping text-5xl mb-4"></i>
+                        <h3 class="text-2xl md:text-3xl font-bold mb-4">共に創る、持続可能な未来</h3>
+                        <p class="text-lg text-white/90 leading-relaxed max-w-3xl mx-auto">
+                            信頼できるパートナー組織との強力な連携により、<br class="hidden md:block">
+                            サビイロネコ保護プロジェクトを確実に推進し、SDGs達成に貢献します。
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 mt-8">
+                        <h4 class="text-xl font-bold text-center mb-6">SDGs達成への貢献</h4>
+                        <div class="flex items-center justify-center gap-6 md:gap-8">
+                            <div class="text-center">
+                                <div class="w-20 h-20 md:w-24 md:h-24 bg-blue-500 rounded-lg flex items-center justify-center mb-3 shadow-lg">
+                                    <span class="text-white text-2xl md:text-3xl font-bold">14</span>
+                                </div>
+                                <p class="text-white font-medium text-sm md:text-base">海の豊かさを守る</p>
+                            </div>
+                            <div class="text-xl md:text-2xl text-white/70">×</div>
+                            <div class="text-center">
+                                <div class="w-20 h-20 md:w-24 md:h-24 bg-green-500 rounded-lg flex items-center justify-center mb-3 shadow-lg">
+                                    <span class="text-white text-2xl md:text-3xl font-bold">15</span>
+                                </div>
+                                <p class="text-white font-medium text-sm md:text-base">陸の豊かさを守る</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="max-w-6xl mx-auto">
+                <div class="space-y-8">
+                    <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all">
+                        <div class="flex flex-col md:flex-row items-center md:items-start gap-6">
+                            <div class="flex-shrink-0">
+                                <div class="w-24 h-24 bg-scidi-blue/10 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-handshake text-scidi-blue text-4xl"></i>
+                                </div>
+                            </div>
+                            <div class="flex-1 text-center md:text-left">
+                                <h4 class="text-2xl font-bold text-gray-800 mb-3">SHISHI YAMASU / EARTH ONE FOUNDATION</h4>
+                                <p class="text-gray-600 leading-relaxed">
+                                    SCIDIは、SHISHI YAMASU/EARTH ONE FOUNDATIONと連携し、日本とスリランカの友好関係深化に貢献します。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all">
+                        <div class="flex flex-col md:flex-row items-center md:items-start gap-6">
+                            <div class="flex-shrink-0">
+                                <div class="w-24 h-24 bg-scidi-green/10 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-globe-asia text-scidi-green text-4xl"></i>
+                                </div>
+                            </div>
+                            <div class="flex-1 text-center md:text-left">
+                                <h4 class="text-2xl font-bold text-gray-800 mb-3">国連支援財団</h4>
+                                <p class="text-gray-600 leading-relaxed">
+                                    SCIDIの活動は、国連支援財団が支援するSDGs（目標14:海の豊かさ、目標15:陸の豊かさ）の達成に寄与します。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all">
+                        <div class="flex flex-col md:flex-row items-center md:items-start gap-6">
+                            <div class="flex-shrink-0">
+                                <div class="w-24 h-24 bg-yellow-500/10 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-sun text-yellow-600 text-4xl"></i>
+                                </div>
+                            </div>
+                            <div class="flex-1 text-center md:text-left">
+                                <h4 class="text-2xl font-bold text-gray-800 mb-3">あまてらす財団</h4>
+                                <p class="text-gray-600 leading-relaxed">
+                                    SCIDIは、あまてらす財団が掲げる日本復興支援に対し、環境動物保護の観点から貢献します。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all">
+                        <div class="flex flex-col md:flex-row items-center md:items-start gap-6">
+                            <div class="flex-shrink-0">
+                                <div class="w-24 h-24 bg-pink-500/10 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-heart text-pink-500 text-4xl"></i>
+                                </div>
+                            </div>
+                            <div class="flex-1 text-center md:text-left">
+                                <h4 class="text-2xl font-bold text-gray-800 mb-3">ココロtoカラダproject</h4>
+                                <p class="text-gray-600 leading-relaxed">
+                                    SCIDIは、ココロtoカラдаprojectが推進するスリランカでの公衆衛生生活向上に、動物由来感染症対策の観点から貢献します。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto bg-scidi-light-blue rounded-2xl p-10">
+                <div class="flex items-center justify-center mb-6">
+                    <img src="https://page.gensparksite.com/v1/base64_upload/4e26ab94932310ed617b23c06f28d7db" alt="SCIDI Logo" class="h-20 w-20 mr-4">
+                    <div>
+                        <h3 class="text-3xl font-bold text-scidi-blue">SCIDI とは</h3>
+                        <p class="text-gray-600">一般社団法人 希少種保全・疾病対策支援機構</p>
+                    </div>
+                </div>
+                <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                    SCIDI（Society for Conservation of rare species and control of Infectious Diseases）は、
+                    希少種の保全と感染症対策を通じて、人と動物が共存できる持続可能な社会の実現を目指す非営利組織です。
+                </p>
+                <div class="border-t border-gray-300 pt-6">
+                    <p class="text-gray-700">
+                        <span class="font-bold text-scidi-blue">代表理事：</span>坂本俊輔
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-gradient-to-br from-scidi-blue to-blue-900 text-white" id="support">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">支援方法</h2>
+                <div class="w-24 h-1 bg-scidi-green mx-auto mb-6"></div>
+                <p class="text-xl text-white/90 max-w-3xl mx-auto">
+                    サビイロネコを守り、密猟のない世界を実現するために、様々な方法でご支援いただけます
+                </p>
+            </div>
+            
+            <div class="max-w-5xl mx-auto">
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white/10 backdrop-blur-sm rounded-xl p-8 border-2 border-white/20 hover:border-scidi-green transition-all">
+                        <div class="w-16 h-16 bg-scidi-green rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-hand-holding-heart text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-center mb-4">寄付</h3>
+                        <p class="text-white/80 text-center leading-relaxed">
+                            保護活動を直接サポートしていただけます
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white/10 backdrop-blur-sm rounded-xl p-8 border-2 border-white/20 hover:border-scidi-green transition-all">
+                        <div class="w-16 h-16 bg-scidi-green rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-share-alt text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-center mb-4">SNSでシェア</h3>
+                        <p class="text-white/80 text-center leading-relaxed">
+                            活動を広めることも大きな支援です
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white/10 backdrop-blur-sm rounded-xl p-8 border-2 border-white/20 hover:border-scidi-green transition-all">
+                        <div class="w-16 h-16 bg-scidi-green rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-hands-helping text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-center mb-4">ボランティア</h3>
+                        <p class="text-white/80 text-center leading-relaxed">
+                            イベントや啓発活動にご協力ください
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white/10 backdrop-blur-sm rounded-xl p-8 border-2 border-white/20 hover:border-scidi-green transition-all">
+                        <div class="w-16 h-16 bg-scidi-green rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-building text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-center mb-4">企業パートナー</h3>
+                        <p class="text-white/80 text-center leading-relaxed">
+                            法人としてのご支援も歓迎します
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <img src="https://page.gensparksite.com/v1/base64_upload/4e26ab94932310ed617b23c06f28d7db" alt="SCIDI Logo" class="h-12 w-12">
+                        <div>
+                            <div class="text-lg font-bold">SCIDI</div>
+                            <div class="text-xs text-gray-400">希少種保全・疾病対策支援機構</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm">
+                        一般社団法人<br>
+                        Society for Conservation of rare species<br>
+                        and control of Infectious Diseases
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-4">リンク</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#about" class="hover:text-scidi-green transition-colors">プロジェクトについて</a></li>
+                        <li><a href="#crisis" class="hover:text-scidi-green transition-colors">危機の現状</a></li>
+                        <li><a href="#solution" class="hover:text-scidi-green transition-colors">私たちの取り組み</a></li>
+                        <li><a href="#support" class="hover:text-scidi-green transition-colors">支援方法</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-4">お問い合わせ</h4>
+                    <p class="text-gray-400 text-sm mb-4">
+                        サビイロネコ保護プロジェクトに関するお問い合わせは、下記までご連絡ください。
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-scidi-green transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-scidi-green transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-scidi-green transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2025 SCIDI (Society for Conservation of rare species and control of Infectious Diseases). All rights reserved.</p>
+                <p class="mt-2">代表理事：坂本俊輔</p>
+            </div>
+        </div>
+    </footer>
+
+    </Layout>
