@@ -1,3 +1,10 @@
+# GitHub upload
+```sh
+git add .
+git commit -m "Update"
+git push
+```
+
 # Astro Starter Kit: Minimal
 
 ```sh
